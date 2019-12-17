@@ -8,7 +8,18 @@ import java.util.List;
  */
 public enum VideoMetadata {
 
-    PRE_ROLL_NO_SKIP("https://storage.googleapis.com/gvabox/media/samples/stock.mp4",
+    IAB_IMA_OMID_CERTIFICATION(
+        "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4",
+        "IAB IMA OMID Certification",
+        "https://vastsynthesizer.appspot.com/iab_omid_certification",
+        //"https://pubads.g.doubleclick.net/gampad/ads?slotname=/6062/IAB_IMA_OMID_Certification/Ad_Rules/omid_test&sz=640x480&unviewed_position_start=1&impl=s&env=vp&gdfp_req=1&ad_rule=0&output=xml_vast4&vad_type=linear&vpos=preroll&pod=1&vrid=1150855&pmnd=0&pmxd=2342000&max_ad_duration=33000&sarid=1150855&sf=23&sfu=vid&kfa=0&tfcd=0",
+        //"https://pubads.g.doubleclick.net/gampad/ads?slotname=/6062/IAB_IMA_OMID_Certification/Ad_Rules/omid_test&sz=640x480&unviewed_position_start=1&impl=s&env=vp&gdfp_req=1&ad_rule=0&output=xml_vast4&vad_type=linear&vpos=preroll&pod=1&vrid=1150855&pmnd=0&pmxd=2342000&max_ad_duration=33000&sarid=1150855&sf=23&sfu=vid&correlator=[TIMESTAMP]",
+        //"https://storage.googleapis.com/gvabox/nickchavez/xml/omid_iab_dfp_vmap.xml",
+        //"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/6062/IAB_IMA_OMID_Certification/Ad_Rules/omid_test&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&vid=two_midrolls_compressed&cmsid=2482459&correlator=",
+            R.drawable.thumbnail1,
+            false),
+    PRE_ROLL_NO_SKIP(
+            "https://s0.2mdn.net/4253510/google_ddm_animation_480P.mp4",
             "Pre-roll, linear not skippable",
             "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/"
                     + "single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast"
@@ -63,7 +74,8 @@ public enum VideoMetadata {
             false);
 
   public static final List<VideoMetadata> APP_VIDEOS =
-      Arrays.asList(PRE_ROLL_NO_SKIP, PRE_ROLL_SKIP, POST_ROLL, VMAP, VMAP_PODS, WRAPPER, CUSTOM);
+      Arrays.asList(IAB_IMA_OMID_CERTIFICATION, PRE_ROLL_NO_SKIP, PRE_ROLL_SKIP, POST_ROLL, VMAP,
+          VMAP_PODS, WRAPPER, CUSTOM);
 
     /** The thumbnail image for the video. **/
     public final int thumbnail;
